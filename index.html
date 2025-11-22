@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>JB Oriente Agricultura LTDA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JB Oriente Agricultura LTDA – produção diversificada de culturas, manejo sustentável do solo e parceria com indústrias na Zona Rural de Itambé.">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background-color: #f7f3ea;
+            color: #143222;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .page-wrapper {
+            min-height: 100vh;
+            background-color: #f7f3ea;
+        }
+
+        header {
+            position: relative;
+            min-height: 100vh;
+            color: #fdf9f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-background {
+            position: absolute;
+            inset: 0;
+            background-image: url("https://images.pexels.com/photos/4557394/pexels-photo-4557394.jpeg");
+            background-size: cover;
+            background-position: center;
+            transform: scale(1.03);
+            filter: brightness(0.6);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top, rgba(20, 50, 34, 0.2), rgba(10, 30, 20, 0.85));
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            max-width: 1100px;
+            padding: 32px 20px 80px;
+        }
+
+        .main-nav {
+            position: fixed;
+            top: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 20;
+            padding: 10px 24px;
+            border-radius: 999px;
+            background-color: rgba(247, 243, 234, 0.9);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-logo {
+            font-size: 16px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 999px;
+            background-color: #143222;
+            color: #fdf9f0;
+            letter-spacing: 0.04em;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 8px;
+            margin-left: 8px;
+        }
+
+        .nav-link {
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 13px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            color: #143222;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #e4dcc8;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 10px rgba(20, 50, 34, 0.2);
+        }
+
+        .nav-link.main-cta {
+            background-color: #143222;
+            color: #fdf9f0;
+        }
+
+        .nav-link.main-cta:hover {
+            background-color: #1f4a32;
+        }
+
+        .hero-label {
+            font-size: 12px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+            opacity: 0.8;
+        }
+
+        .hero-title {
+            font-family: "Georgia", "Times New Roman", serif;
+            font-size: 40px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .hero-subtitle {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.22em;
+            margin-bottom: 24px;
+            opacity: 0.85;
+        }
+
+        .hero-description {
+            max-width: 540px;
+            margin: 0 auto 28px;
+            font-size: 15px;
+            opacity: 0.95;
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 11px 24px;
+            border-radius: 999px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-primary {
+            background-color: #f5e4c9;
+            color: #143222;
+        }
+
+        .btn-primary:hover {
+            background-color: #f9e9d3;
+            transform: translateY(-1px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: #fdf9f0;
+            border: 1px solid rgba(245, 228, 201, 0.7);
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(245, 228, 201, 0.1);
+            transform: translateY(-1px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+        }
+
+        .hero-meta {
+            margin-top: 40px;
+            font-size: 11px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            opacity: 0.7;
+        }
+
+        main {
+            position: relative;
+            z-index: 1;
+        }
+
+        .section {
+            padding: 80px 20px;
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        .section-light {
+            background-color: #f7f3ea;
+        }
+
+        .section-mid {
+            background-color: #f0e8d7;
+        }
+
+        .section-dark {
+            background-color: #143222;
+            color: #f7f3ea;
+        }
+
+        .section-inner {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .section-tag {
+            font-size: 11px;
+            letter-spacing: 0.26em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            opacity: 0.75;
+        }
+
+        .section-title {
+            font-family: "Georgia", "Times New Roman", serif;
+            font-size: 30px;
+            margin-bottom: 18px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .section-subtitle {
+            font-size: 14px;
+            max-width: 620px;
+            opacity: 0.8;
+            margin-bottom: 32px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 22px;
+            margin-top: 28px;
+        }
+
+        .about-card {
+            border-radius: 26px;
+            background-color: #ffffff;
+            overflow: hidden;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .about-card-img {
+            height: 190px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .about-card-img.field {
+            background-image: url("https://images.pexels.com/photos/325944/pexels-photo-325944.jpeg");
+        }
+
+        .about-card-img.people {
+            background-image: url("main1.jpg");
+        }
+
+        .about-card-img.river {
+            background-image: url("https://images.pexels.com/photos/2846079/pexels-photo-2846079.jpeg");
+        }
+
+        .about-card-body {
+            padding: 18px 18px 20px;
+        }
+
+        .about-card-title {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .about-card-text {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+
+        .service-card {
+            border-radius: 26px;
+            background-color: #ffffff;
+            padding: 22px 22px 26px;
+            box-shadow: 0 18px 42px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .service-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 999px;
+            border: 1px solid #d9c9a8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .service-title {
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .service-text {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        .benefit-item {
+            text-align: left;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+        .benefit-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            border: 1px solid rgba(247, 243, 234, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 17px;
+        }
+
+        .benefit-title {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .benefit-text {
+            font-size: 13px;
+            opacity: 0.85;
+        }
+
+        .process-flow {
+            margin-top: 34px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 26px;
+            align-items: stretch;
+        }
+
+        .process-step {
+            position: relative;
+            border-radius: 22px;
+            padding: 22px 20px 24px;
+            background-color: #ffffff;
+            border: 1px solid #d4c8b3;
+        }
+
+        .process-step-number {
+            font-size: 11px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            opacity: 0.7;
+            margin-bottom: 10px;
+        }
+
+        .process-step-title {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .process-step-text {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+
+        .process-arrow {
+            display: none;
+        }
+
+        .cta-panel {
+            border-radius: 30px;
+            padding: 30px 26px;
+            background: linear-gradient(135deg, #143222, #35634a);
+            color: #f7f3ea;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .cta-title {
+            font-family: "Georgia", "Times New Roman", serif;
+            font-size: 24px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .cta-text {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .cta-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .cta-note {
+            font-size: 12px;
+            opacity: 0.75;
+        }
+
+        .contacts-wrapper {
+            display: grid;
+            grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.4fr);
+            gap: 32px;
+            align-items: start;
+        }
+
+        .contact-block {
+            border-radius: 26px;
+            padding: 22px 20px 24px;
+            background-color: #ffffff;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-line {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .contact-label {
+            display: block;
+            font-size: 11px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            opacity: 0.6;
+            margin-bottom: 4px;
+        }
+
+        .contact-value {
+            font-size: 14px;
+        }
+
+        .contact-email-link {
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+
+        .contact-map {
+            border-radius: 26px;
+            padding: 20px 18px;
+            background: radial-gradient(circle at top left, #f7f3ea, #e0d2b7);
+            font-size: 13px;
+        }
+
+        .footer {
+            padding: 26px 20px 34px;
+            background-color: #10271a;
+            color: #f7f3ea;
+        }
+
+        .footer-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        .footer-brand {
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .footer-meta {
+            opacity: 0.8;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(6, 20, 12, 0.65);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 40;
+            padding: 16px;
+        }
+
+        .modal-content {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 28px;
+            background-color: #f7f3ea;
+            padding: 24px 22px 26px;
+            box-shadow: 0 22px 58px rgba(0, 0, 0, 0.22);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+
+        .modal-title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .modal-close {
+            width: 30px;
+            height: 30px;
+            border-radius: 999px;
+            border: none;
+            background-color: #e0d4c0;
+            font-size: 18px;
+            line-height: 1;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .modal-close:hover {
+            background-color: #d3c4aa;
+            transform: translateY(-1px);
+        }
+
+        .modal-body {
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px 14px;
+            margin-bottom: 12px;
+        }
+
+        .form-grid-full {
+            grid-column: 1 / -1;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 12px;
+            margin-bottom: 4px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            opacity: 0.7;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 10px 11px;
+            border-radius: 12px;
+            border: 1px solid #d3c5ab;
+            background-color: #fdf9f0;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            border-color: #143222;
+            box-shadow: 0 0 0 2px rgba(20, 50, 34, 0.12);
+            background-color: #ffffff;
+        }
+
+        .form-textarea {
+            min-height: 110px;
+            resize: vertical;
+        }
+
+        .form-footer {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .form-hint {
+            font-size: 11px;
+            opacity: 0.7;
+        }
+
+        .btn-submit {
+            align-self: flex-start;
+            padding: 11px 22px;
+            border-radius: 999px;
+            border: none;
+            background-color: #143222;
+            color: #f7f3ea;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #205036;
+            transform: translateY(-1px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .success-modal-content {
+            background-color: #143222;
+            color: #f7f3ea;
+        }
+
+        .success-modal-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .success-modal-text {
+            font-size: 14px;
+            margin-bottom: 16px;
+            opacity: 0.9;
+        }
+
+        .success-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            padding: 6px 11px;
+            border-radius: 999px;
+            background-color: rgba(247, 243, 234, 0.1);
+            border: 1px solid rgba(247, 243, 234, 0.4);
+        }
+
+        .success-badge span {
+            font-size: 16px;
+        }
+
+        @media (min-width: 860px) {
+            .hero-title {
+                font-size: 54px;
+            }
+
+            .hero-subtitle {
+                font-size: 15px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .hero-inner {
+                padding-top: 120px;
+            }
+
+            .process-flow {
+                position: relative;
+            }
+
+            .process-arrow {
+                display: block;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: -18px;
+                font-size: 20px;
+                opacity: 0.5;
+            }
+
+            .process-step:last-child .process-arrow {
+                display: none;
+            }
+        }
+
+        @media (max-width: 720px) {
+            .main-nav {
+                flex-wrap: wrap;
+                padding-inline: 16px;
+            }
+
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .section {
+                padding-inline: 16px;
+            }
+
+            .contacts-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-panel {
+                padding: 26px 20px;
+            }
+
+            .modal-content {
+                padding-inline: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <nav class="main-nav">
+            <a href="#inicio" class="nav-logo">JB ORIENTE</a>
+            <div class="nav-menu">
+                <button class="nav-link" onclick="scrollToSection('sobre')">A fazenda</button>
+                <button class="nav-link" onclick="scrollToSection('servicos')">Cultivos e serviços</button>
+                <button class="nav-link" onclick="scrollToSection('diferenciais')">Por que nos escolher</button>
+                <button class="nav-link" onclick="scrollToSection('processo')">Como trabalhamos</button>
+                <button class="nav-link" onclick="scrollToSection('contatos')">Localização</button>
+                <button class="nav-link main-cta" onclick="openContactModal()">Falar com a equipe</button>
+            </div>
+        </nav>
+
+        <header id="inicio">
+            <div class="hero-background"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-inner">
+                <div class="hero-label">Zona Rural de Itambé · Pernambuco</div>
+                <h1 class="hero-title">JB ORIENTE</h1>
+                <div class="hero-subtitle">AGRICULTURA DIVERSIFICADA, SOLO VIVO, SAFRAS DE ALTA QUALIDADE</div>
+                <p class="hero-description">
+                    Na JB Oriente Agricultura LTDA, o canavial divide espaço com grãos, pastagens e áreas de reserva.
+                    Unimos manejo regenerativo, dados de campo e experiência acumulada em ENGENHO ORIENTE para entregar
+                    produção confiável para usinas, indústrias e parceiros comerciais durante todo o ano.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" onclick="scrollToSection('sobre')">Conhecer a fazenda</button>
+                    <button class="btn btn-outline" onclick="openContactModal()">Planejar próxima safra</button>
+                </div>
+                <div class="hero-meta">
+                    DESDE OS PRIMEIROS TALHÕES ATÉ A ÚLTIMA CARGA · CULTIVO RESPONSÁVEL EM CADA HECTARE
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="section section-light" id="sobre">
+                <div class="section-inner">
+                    <div class="section-tag">NOSSA HISTÓRIA DE CAMPO</div>
+                    <h2 class="section-title">Um engenho que virou laboratório vivo de agricultura</h2>
+                    <p class="section-subtitle">
+                        JB Oriente Agricultura LTDA nasceu em torno do tradicional ENGENHO ORIENTE e foi se transformando em um
+                        polo de cultivos rotacionados na Zona Rural de Itambé. A cada safra experimentamos novas combinações de
+                        culturas, coberturas de solo e práticas de conservação de água para aumentar produtividade sem exaurir
+                        o ambiente. Permanentemente conectada a parceiros industriais, a fazenda sincroniza operações com a
+                        demanda de usinas de cana, fábricas de ração e compradores de grãos.
+                    </p>
+                    <div class="about-grid">
+                        <article class="about-card">
+                            <div class="about-card-img field"></div>
+                            <div class="about-card-body">
+                                <h3 class="about-card-title">Mosaico de culturas no Agreste</h3>
+                                <p class="about-card-text">
+                                    Nossos talhões misturam cana-de-açúcar, milho, sorgo e leguminosas de cobertura em um
+                                    calendário planejado para proteger o solo o ano inteiro. Sistemas de amostragem de
+                                    fertilidade e monitoramento de pragas guiados por dados ajudam a decidir onde investir,
+                                    evitando insumos em excesso e preservando a biologia do campo.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="about-card">
+                            <div class="about-card-img people"></div>
+                            <div class="about-card-body">
+                                <h3 class="about-card-title">Equipe que conhece cada gleba pelo nome</h3>
+                                <p class="about-card-text">
+                                    Na JB Oriente, a equipe técnica e operacional caminha junto com o produtor em cada decisão,
+                                    da escolha da variedade ao melhor momento de colheita. Trabalhamos com treinamentos
+                                    frequentes, protocolos claros e uma cultura de segurança para quem opera tratores, máquinas
+                                    de plantio e colheita na fazenda.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="about-card">
+                            <div class="about-card-img river"></div>
+                            <div class="about-card-body">
+                                <h3 class="about-card-title">Água, matas e vizinhança respeitadas</h3>
+                                <p class="about-card-text">
+                                    Mantemos áreas de preservação permanente ativas, margens de cursos d’água protegidas e
+                                    corredores ecológicos entre talhões produtivos. O resultado é um ambiente mais resiliente a
+                                    extremos climáticos e uma relação de longo prazo com a comunidade rural que compartilha os
+                                    mesmos recursos naturais que nós.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section-mid" id="servicos">
+                <div class="section-inner">
+                    <div class="section-tag">O QUE CULTIVAMOS</div>
+                    <h2 class="section-title">Cultivos, serviços e parcerias que giram o ano todo</h2>
+                    <p class="section-subtitle">
+                        Mesclamos produção própria e áreas destinadas a parcerias para que indústrias tenham segurança em
+                        volume, qualidade e rastreabilidade. A cada contrato ajustamos o desenho dos talhões, o pacote
+                        tecnológico e o cronograma de entrada de máquinas, sempre com registros digitais de campo.
+                    </p>
+                    <div class="services-grid">
+                        <article class="service-card">
+                            <div class="service-icon">🌱</div>
+                            <h3 class="service-title">Cana-de-açúcar com manejo sustentável</h3>
+                            <p class="service-text">
+                                Nossos canaviais são conduzidos com adubação baseada em análise de solo, uso criterioso de
+                                corretivos e plantio em curvas de nível. A palhada é mantida após a colheita para proteger o
+                                terreno e reduzir evaporação. O resultado é matéria-prima estável para usinas, com foco em ATR,
+                                uniformidade de fornecimento e redução da erosão.
+                            </p>
+                        </article>
+                        <article class="service-card">
+                            <div class="service-icon">🌾</div>
+                            <h3 class="service-title">Rotação de grãos e leguminosas</h3>
+                            <p class="service-text">
+                                Alternamos milho, sorgo e feijão com plantas de cobertura para recuperar a estrutura física do
+                                solo e quebrar ciclos de doenças. Essa rotação permite, em muitos casos, diminuir a
+                                necessidade de fertilizantes nitrogenados nos ciclos seguintes, além de gerar grãos para ração
+                                e silagem para pecuária regional.
+                            </p>
+                        </article>
+                        <article class="service-card">
+                            <div class="service-icon">🤝</div>
+                            <h3 class="service-title">Gestão de áreas para parceiros industriais</h3>
+                            <p class="service-text">
+                                Disponibilizamos talhões e infraestrutura agrícola para indústrias que desejam integrar parte
+                                da sua origem de matéria-prima. Cuidamos desde o planejamento da safra até a entrega na porteira,
+                                com relatórios de campo, indicadores de produtividade e rastreabilidade por área. Assim,
+                                transformamos contratos em relações de longo prazo.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section-dark" id="diferenciais">
+                <div class="section-inner">
+                    <div class="section-tag">POR QUE PRODUTORES E INDÚSTRIAS NOS ESCOLHEM</div>
+                    <h2 class="section-title">Diferenciais que nascem do chão e vão até o caminhão</h2>
+                    <p class="section-subtitle">
+                        Em JB Oriente Agricultura LTDA, cada decisão agronômica é pensada para manter o solo vivo, equipes
+                        seguras e contratos atendidos. A seguir, alguns pilares que fazem nossa fazenda ser vista como parceira
+                        estratégica para quem depende de cultivo consistente no Agreste pernambucano.
+                    </p>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">📊</div>
+                            <div>
+                                <div class="benefit-title">Gestão de talhões guiada por dados</div>
+                                <p class="benefit-text">
+                                    Reunimos mapas de produtividade, histórico de insumos e registros climáticos para identificar
+                                    áreas de atenção em cada safra. Isso permite sugerir ajustes de variedade, reforma de cana ou
+                                    mudança de cultura com base em números, e não apenas em percepção visual.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🌿</div>
+                            <div>
+                                <div class="benefit-title">Compromisso com práticas regenerativas</div>
+                                <p class="benefit-text">
+                                    Buscamos, sempre que possível, integrar plantio direto, cobertura permanente e mínimo
+                                    revolvimento do solo. Programas de redução gradual de químicos e incentivo ao controle
+                                    biológico tornam a fazenda mais resiliente e alinhada às exigências de mercados
+                                    socioambientalmente responsáveis.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🚚</div>
+                            <div>
+                                <div class="benefit-title">Logística pensada desde o planejamento</div>
+                                <p class="benefit-text">
+                                    Organizamos talhões, acessos e pontos de carregamento para facilitar a entrada de caminhões e
+                                    transbordos, reduzindo filas e tempo de espera. A programação de corte e colheita leva em
+                                    conta janelas industriais e rotas de transporte, garantindo entregas mais previsíveis.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">📍</div>
+                            <div>
+                                <div class="benefit-title">Presença forte na Zona Rural de Itambé</div>
+                                <p class="benefit-text">
+                                    Estar inseridos em ENGENHO ORIENTE S/N significa ter proximidade com mão de obra local,
+                                    fornecedores regionais e vias estratégicas para escoamento. Essa combinação reduz custos
+                                    logísticos e encurta a distância entre o campo e a indústria.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section-light" id="processo">
+                <div class="section-inner">
+                    <div class="section-tag">NOSSO JEITO DE CULTIVAR</div>
+                    <h2 class="section-title">Como conduzimos cada safra do primeiro planejamento à entrega</h2>
+                    <p class="section-subtitle">
+                        Cada parceiro chega com necessidades específicas de matéria-prima, prazos e volume. A partir disso,
+                        desenhamos um ciclo de trabalho em três etapas que alinham agronomia, logística e transparência de
+                        informações para todos os envolvidos.
+                    </p>
+                    <div class="process-flow">
+                        <div class="process-step">
+                            <div class="process-step-number">ETAPA 01 · PLANEJAMENTO DE TALHÕES</div>
+                            <div class="process-step-title">Diagnóstico de solo e desenho de áreas</div>
+                            <p class="process-step-text">
+                                Iniciamos com visitas técnicas, coleta de amostras de solo e levantamento de histórico das áreas
+                                disponíveis em ENGENHO ORIENTE. Com esses dados, definimos culturas, variedades, população de
+                                plantas e época de plantio mais adequadas para equilibrar produtividade e conservação.
+                            </p>
+                            <div class="process-arrow">➜</div>
+                        </div>
+                        <div class="process-step">
+                            <div class="process-step-number">ETAPA 02 · EXECUÇÃO E ACOMPANHAMENTO</div>
+                            <div class="process-step-title">Plantio, tratos culturais e monitoramento</div>
+                            <p class="process-step-text">
+                                Durante o ciclo, realizamos plantio mecanizado ou semimecanizado, adubação em taxa recomendada e
+                                monitoramento de pragas e doenças. Qualquer intervenção maior é registrada e comunicada para o
+                                parceiro, que acompanha a evolução da safra por relatórios de campo e imagens.
+                            </p>
+                            <div class="process-arrow">➜</div>
+                        </div>
+                        <div class="process-step">
+                            <div class="process-step-number">ETAPA 03 · COLHEITA E ENTREGA</div>
+                            <div class="process-step-title">Safra colhida no ponto certo</div>
+                            <p class="process-step-text">
+                                Com base em análises, definimos a janela ideal de colheita e organizamos máquinas e caminhões
+                                para atender ao fluxo da indústria contratante. Cada carga sai da fazenda com indicação de talhão
+                                de origem, facilitando rastreio e controle de qualidade no destino final.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section-mid" id="contato">
+                <div class="section-inner">
+                    <div class="section-tag">CONVERSAS QUE COMEÇAM NO CAMPO</div>
+                    <h2 class="section-title">Vamos desenhar a próxima safra juntos?</h2>
+                    <p class="section-subtitle">
+                        Use a mensagem da fazenda para compartilhar quais culturas você precisa, qual o horizonte de tempo e
+                        como prefere trabalhar. Podemos estruturar desde áreas específicas de teste até contratos maiores de
+                        fornecimento, sempre respeitando a capacidade real da terra e da equipe.
+                    </p>
+                    <div class="cta-panel">
+                        <div class="cta-title">Fale com a equipe JB Oriente Agricultura</div>
+                        <p class="cta-text">
+                            Em poucas linhas, conte o que você procura: cana para moagem, grãos para ração, parceria de manejo
+                            ou outro projeto agrícola. Assim que recebermos a mensagem, analisaremos o cenário dos talhões e
+                            retornaremos por e-mail para aprofundar a conversa.
+                        </p>
+                        <div class="cta-actions">
+                            <button class="btn btn-primary" onclick="openContactModal()">Abrir formulário de mensagem</button>
+                            <button class="btn btn-outline" onclick="scrollToSection('contatos')">Ver endereço oficial</button>
+                        </div>
+                        <div class="cta-note">
+                            Não pedimos número de telefone: toda troca inicial é feita por e-mail para que você possa organizar
+                            as informações no seu tempo.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section-light" id="contatos">
+                <div class="section-inner">
+                    <div class="section-tag">ONDE ESTAMOS</div>
+                    <h2 class="section-title">Contato institucional e localização da fazenda</h2>
+                    <p class="section-subtitle">
+                        Nossa base está no coração do ENGENHO ORIENTE, ponto de partida para visitar talhões, acompanhar
+                        operações e alinhar planos de safra. Para qualquer assunto institucional ou novas parcerias, utilize os
+                        canais abaixo.
+                    </p>
+                    <div class="contacts-wrapper">
+                        <div class="contact-block">
+                            <div class="contact-line">
+                                <span class="contact-label">ENDEREÇO</span>
+                                <span class="contact-value">
+                                    Rua ENGENHO ORIENTE S/N · 55920-000 · Zona Rural · Itambé · Pernambuco · Brasil
+                                </span>
+                            </div>
+                            <div class="contact-line">
+                                <span class="contact-label">E-MAIL CORPORATIVO</span>
+                                <span class="contact-value">
+                                    <a class="contact-email-link" href="mailto:main@jborienteagricultura.pro">
+                                        main@jborienteagricultura.pro
+                                    </a>
+                                </span>
+                            </div>
+                            <div class="contact-line">
+                                <span class="contact-label">RAZÃO SOCIAL</span>
+                                <span class="contact-value">
+                                    JB ORIENTE AGRICULTURA LTDA
+                                </span>
+                            </div>
+                        </div>
+                        <div class="contact-map">
+                            <p>
+                                Enxergue este ponto como o centro de um mosaico de culturas que se espalha por morros,
+                                baixadas e áreas de preservação. A partir de Itambé, temos fácil conexão com polos industriais
+                                da região, o que facilita o deslocamento de caminhões e equipes técnicas.
+                            </p>
+                            <p style="margin-top: 10px;">
+                                Ao agendar uma visita, indicamos o melhor acesso para máquinas e veículos de apoio, respeitando
+                                sempre a dinâmica das comunidades rurais vizinhas e as condições das estradas locais.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-inner">
+                <div class="footer-brand">JB ORIENTE AGRICULTURA LTDA</div>
+                <div class="footer-meta">
+                    Produção diversificada de culturas · Zona Rural de Itambé · Todos os direitos reservados.
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="modal-overlay" id="contactModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">Enviar uma mensagem para JB Oriente</div>
+                <button class="modal-close" onclick="closeContactModal()" aria-label="Fechar formulário">×</button>
+            </div>
+            <div class="modal-body">
+                Conte quem você é, como atua na cadeia agrícola e o que espera da parceria. Responderemos por e-mail com
+                sugestões de caminhos possíveis para a próxima safra.
+            </div>
+            <form id="contactForm">
+                <div class="form-grid">
+                    <div>
+                        <label class="form-label" for="nome">Nome completo</label>
+                        <input class="form-input" type="text" id="nome" name="nome" required>
+                    </div>
+                    <div>
+                        <label class="form-label" for="email">E-mail</label>
+                        <input class="form-input" type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-grid-full">
+                        <label class="form-label" for="assunto">Assunto da mensagem</label>
+                        <input class="form-input" type="text" id="assunto" name="assunto" required>
+                    </div>
+                    <div class="form-grid-full">
+                        <label class="form-label" for="mensagem">Mensagem</label>
+                        <textarea class="form-textarea" id="mensagem" name="mensagem" required></textarea>
+                    </div>
+                </div>
+                <div class="form-footer">
+                    <p class="form-hint">
+                        Seus dados são usados apenas para retornarmos o contato e organizar propostas de parceria. Você pode
+                        solicitar a remoção da sua mensagem a qualquer momento.
+                    </p>
+                    <button type="submit" class="btn-submit">Enviar mensagem</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-content success-modal-content">
+            <div class="modal-header">
+                <div class="success-modal-title">Mensagem enviada com sucesso</div>
+                <button class="modal-close" onclick="closeSuccessModal()" aria-label="Fechar aviso">×</button>
+            </div>
+            <div class="success-modal-text">
+                Recebemos sua mensagem na caixa de entrada de JB Oriente Agricultura LTDA. Assim que analisarmos o cenário de
+                safra e disponibilidade de áreas, responderemos para o e-mail informado para seguir a conversa.
+            </div>
+            <div class="success-badge">
+                <span>✔</span>
+                <span>Obrigado por escrever para a fazenda.</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function scrollToSection(id) {
+            var section = document.getElementById(id);
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+
+        function openContactModal() {
+            var modal = document.getElementById("contactModal");
+            modal.style.display = "flex";
+        }
+
+        function closeContactModal() {
+            var modal = document.getElementById("contactModal");
+            modal.style.display = "none";
+        }
+
+        function openSuccessModal() {
+            var modal = document.getElementById("successModal");
+            modal.style.display = "flex";
+        }
+
+        function closeSuccessModal() {
+            var modal = document.getElementById("successModal");
+            modal.style.display = "none";
+        }
+
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            closeContactModal();
+            openSuccessModal();
+        });
+
+        document.getElementById("contactModal").addEventListener("click", function (event) {
+            if (event.target === this) {
+                closeContactModal();
+            }
+        });
+
+        document.getElementById("successModal").addEventListener("click", function (event) {
+            if (event.target === this) {
+                closeSuccessModal();
+            }
+        });
+    </script>
+</body>
+</html>
